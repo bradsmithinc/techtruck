@@ -4,12 +4,12 @@ OmniAuth working in harmony in Ruby on Rails 4.
 
 ## Gems
 
-- omniauth
-- omniauth-twitter
-- figaro
+- `omniauth`
+- `omniauth-twitter`
+- `figaro`
 
 ## References
 
 - https://github.com/intridea/omniauth
+- https://github.com/arunagw/omniauth-twitter
 - https://github.com/laserlemon/figaro
-
