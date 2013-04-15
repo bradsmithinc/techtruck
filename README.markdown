@@ -2,6 +2,14 @@
 
 OmniAuth working in harmony in Ruby on Rails 4.
 
+## Status
+
+In Progress :)
+
+## URL
+
+http://codecase-omniauth-rails.herokuapp.com/
+
 ## Gems
 
 - `omniauth`
