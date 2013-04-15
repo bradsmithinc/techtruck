@@ -1,7 +1,7 @@
+ruby "2.0.0"
 source 'https://rubygems.org'
 
 gem 'rails', '4.0.0.beta1'
-gem 'sqlite3'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.0.beta1'
@@ -18,3 +18,13 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'minitest-rails'
 gem 'fabrication'
+
+group :production do
+  gem 'pg'
+  gem 'rails_log_stdout', github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+end
+
+group :development, :test do
+  gem 'sqlite3'
+end
