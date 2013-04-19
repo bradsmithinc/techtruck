@@ -7,4 +7,9 @@ class ServicesController < ApplicationController
 
   def failure
   end
+
+  private
+  def omnihash
+    request.env['omniauth.auth']
+  end
 end

@@ -1,3 +1,6 @@
 en:
+  app:
+    title: "Omniauth Rails (codecase)"
+    subtitle: "Example of OmniAuth implementations in Ruby on Rails 4."
   auth:
     twitter: "Login with Twitter"

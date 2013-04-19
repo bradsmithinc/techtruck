@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Omniauth Rails</title>
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
@@ -8,6 +8,17 @@
 </head>
 <body>
   <div class="container">
+    <div class="row">
+      <div class="span10 offset1">
+        <div class="page-header">
+          <h1>
+            <%= t('app.title') %>
+            <br>
+            <small><%= t('app.subtitle') %></small>
+          </h1>
+        </div>
+      </div>
+    </div>
     <%= yield %>
   </div>
 </body>
