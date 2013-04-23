@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(version: 20130415120603) do
 
   create_table "services", force: true do |t|
-    t.integer  "users_id"
+    t.integer  "user_id"
     t.string   "provider"
     t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "services", ["users_id"], name: "index_services_on_users_id"
+  add_index "services", ["user_id"], name: "index_services_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

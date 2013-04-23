@@ -1,5 +1,9 @@
 <div class="row">
   <div class="span10 offset1">
-    <a href="/auth/twitter" class="btn btn-primary"><%= t('auth.twitter') %></a>
+    <% if logged_in? %>
+        <a href="<%= logout_path %>" class="btn"><%= t('auth.logout') %></a>
+    <% else %>
+      <a href="/auth/twitter" class="btn btn-primary"><%= t('auth.twitter') %></a>
+    <% end %>
   </div>
 </div>

@@ -1,5 +1,9 @@
 OmniauthRails::Application.routes.draw do
-  match '/auth/:service/callback' => 'services#create', via: [:get, :post]
-  match '/auth/failure' => 'services#failure', via: [:get, :post]
+  match '/auth/:service/callback' => 'services#create', via: %i(get post)
+  match '/auth/failure' => 'services#failure', via: %i(get post)
+  match '/logout' => 'sessions#destroy', via: %i(get delete), as: :logout
+
+  resources :services, only: %i(new index create destroy)
+
   root to: "services#new"
 end

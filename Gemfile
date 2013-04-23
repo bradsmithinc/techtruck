@@ -30,4 +30,7 @@ end
 
 group :development do
   gem 'figaro'
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end

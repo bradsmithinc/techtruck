@@ -1,7 +1,7 @@
 class CreateServices < ActiveRecord::Migration
   def change
     create_table :services do |t|
-      t.references :users, index: true
+      t.references :user, index: true
       t.string :provider
       t.string :uid
 
