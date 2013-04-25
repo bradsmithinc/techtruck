@@ -1,3 +1,5 @@
 development:
   TWITTER_KEY: ""
   TWITTER_SECRET: ""
+  GITHUB_KEY: ""
+  GITHUB_SECRET: ""

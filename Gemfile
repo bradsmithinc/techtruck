@@ -13,10 +13,10 @@ end
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
+
 gem 'omniauth'
 gem 'omniauth-twitter'
-gem 'minitest-rails'
-gem 'fabrication'
+gem 'omniauth-github'
 
 group :production do
   gem 'pg'
@@ -24,8 +24,13 @@ group :production do
   gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 end
 
+group :test do
+  gem 'minitest-rails'
+end
+
 group :development, :test do
   gem 'sqlite3'
+  gem 'fabrication'
 end
 
 group :development do
