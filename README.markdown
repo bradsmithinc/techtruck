@@ -4,7 +4,7 @@ Example of OmniAuth implementations in Ruby on Rails 4.
 
 ## Status
 
-In Progress :)
+[![Build Status](https://travis-ci.org/codecase/omniauth-rails.png)](https://travis-ci.org/codecase/omniauth-rails)
 
 ## URL
 
