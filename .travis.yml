@@ -4,8 +4,8 @@ rvm:
 env:
   - DB=postgresql DATABASE_TEST_NAME=omniauth_rails_test DATABASE_TEST_USERNAME=postgres
 before_script:
-  - psql -c 'createdatabase omniauth_rails_test' -U postgres
+  - psql -c 'create database omniauth_rails_test' -U postgres
 script:
-  - rake db:migrate --trace
-  - rake db:test:prepare
-  - rake test
+  - bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake test
