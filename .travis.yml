@@ -2,6 +2,8 @@ language: ruby
 rvm:
   - 2.0.0
 env:
-  - RAILS_ENV=test
-before_script:
-  - rake db:migrate
+  - DB=sqlite
+script:
+  - rake db:reset
+  - rake db:test:prepare
+  - rake test
