@@ -8,6 +8,7 @@ group :assets do
   gem 'bootstrap-sass'
   gem 'coffee-rails', '~> 4.0.0.beta1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'font-awesome-rails'
 end
 
 gem 'jquery-rails'
@@ -26,6 +27,8 @@ end
 
 group :test do
   gem 'minitest-rails'
+  gem 'simplecov', require: false
+  gem 'turn'
 end
 
 group :development, :test do
@@ -36,6 +39,7 @@ end
 group :development do
   gem 'figaro'
   gem 'pry-rails'
+  gem 'awesome_print'
   gem 'better_errors'
   gem 'binding_of_caller'
 end

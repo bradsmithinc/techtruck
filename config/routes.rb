@@ -3,7 +3,7 @@ OmniauthRails::Application.routes.draw do
   match '/auth/failure' => 'services#failure', via: %i(get post)
   match '/logout' => 'sessions#destroy', via: %i(get delete), as: :logout
 
-  resources :services, only: %i(new index create destroy)
+  resources :services, only: %i(index create destroy)
 
-  root to: "services#new"
+  root to: "sessions#new"
 end

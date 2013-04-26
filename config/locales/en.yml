@@ -3,7 +3,8 @@ en:
     title: "Omniauth Rails (codecase)"
     subtitle: "Example of OmniAuth implementations in Ruby on Rails 4."
   auth:
-    twitter: "Login with Twitter"
+    twitter_html: "Login with <strong>Twitter</strong>"
+    github_html: "Login with <strong>GitHub</strong>"
     logout: "Logout"
   notifications:
     account_created: 'Your account has been created and you have been logged in!'

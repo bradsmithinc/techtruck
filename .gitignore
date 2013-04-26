@@ -17,3 +17,6 @@
 
 # Ignore figaro's application configuration
 /config/application.yml
+
+# Ignore simplecov coverage output
+/coverage

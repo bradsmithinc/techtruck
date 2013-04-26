@@ -1,11 +1,11 @@
 require "test_helper"
 
-class UserTest < ActiveSupport::TestCase
-  setup do
+describe User do
+  before do
     @user = User.new
   end
 
-  def test_has_many_services
-    assert true, @user.respond_to?(:services)
+  it "must be valid" do
+    @user.valid?.must_equal true
   end
 end

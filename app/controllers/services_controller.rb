@@ -1,30 +1,29 @@
 class ServicesController < ApplicationController
-  def new; end
+  def index
+    @providers     ||= omniauth_providers
+    @user_services   = current_user.services
+  end
 
   def create
     current_service = Service.where(provider: omnihash[:provider], uid: omnihash[:uid]).first
 
     if logged_in?
       if current_service
-        flash[:notice] = I18n.t('notifications.provider_already_connected', provider: omnihash[:provider].capitalize)
+        flash[:notice] = I18n.t('notifications.provider_already_connected', provider: omnihash[:provider])
       else
         current_user.services.create!({
           provider: omnihash[:provider],
           uid: omnihash[:uid]
         })
 
-        flash[:notice] = I18n.t('notifications.provider_added', provider: omnihash[:provider].capitalize)
+        flash[:notice] = I18n.t('notifications.provider_added', provider: omnihash[:provider])
       end
-
-      redirect_to services_path
     else
       if current_service
         session[:user_id]            = current_service.user.id
         session[:service_id]         = current_service.id
         session[:oauth_token]        = omnihash[:credentials][:token]
         session[:oauth_token_secret] = omnihash[:credentials][:secret]
-
-        redirect_to redirect_path
       else
         user         = User.new
         user.name    = omnihash[:info][:nickname]
@@ -41,17 +40,18 @@ class ServicesController < ApplicationController
           session[:oauth_token_secret] = omnihash[:credentials][:secret]
 
           flash[:notice] = I18n.t('notifications.account_created')
-          redirect_to root_path
         end
       end
     end
+
+    redirect_to services_path
   end
 
   def destroy
     service = current_user.services.find(params[:id])
     if service.respond_to?(:destroy) and service.destroy
-      flash[:notice] = I18n.t('notifications.provider_unlinked', provider: service.provider.capitalize)
-      redirect_to services_path
+      flash[:notice] = I18n.t('notifications.provider_unlinked', provider: service.provider)
+      redirect_to redirect_path
     end
   end
 
@@ -63,5 +63,13 @@ class ServicesController < ApplicationController
   private
   def omnihash
     request.env['omniauth.auth']
+  end
+
+  def omniauth_providers
+    (OmniAuth::Strategies.local_constants.map(&:downcase) - %i(developer oauth oauth2)).map(&:to_s)
+  end
+
+  def redirect_path
+    :services
   end
 end
