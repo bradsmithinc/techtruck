@@ -29,6 +29,7 @@ group :test do
   gem 'minitest-rails'
   gem 'simplecov', require: false
   gem 'turn'
+  gem 'coveralls', require: false
 end
 
 group :development, :test do
