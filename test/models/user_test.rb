@@ -6,6 +6,6 @@ describe User do
   end
 
   it "must be valid" do
-    @user.valid?.must_equal true
+    @user.must_be :valid?
   end
 end
