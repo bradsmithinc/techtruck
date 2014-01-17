@@ -19,7 +19,7 @@ gem 'jbuilder', '~> 1.0.1'
 
 gem 'omniauth'
 gem 'omniauth-twitter'
-gem 'omniauth-github'
+gem 'omniauth-facebook'
 
 group :production do
   gem 'rails_log_stdout', github: 'heroku/rails_log_stdout'
