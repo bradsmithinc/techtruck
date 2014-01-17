@@ -56,10 +56,10 @@
                   </button>
                   <div class="nav-collapse collapse">
                     <ul id="navigation" class="nav">
-                      <li class="active"><a class="level-one goto" href="#top">Home</a></li>
-                      <li><a class="level-one goto" href="#resources">Resources</a></li>
+                      <li class="active"><a class="level-one goto" href="#top">Home</a></li> 
                       <li><a class="level-one goto" href="#about">About</a></li>
                       <li><a class="level-one goto" href="#cities">Cities</a></li>
+                      <li><a class="level-one goto" href="#resources">Resources</a></li>
                       <li><a class="level-one goto" href="#stories">Stories</a></li>
                       <li><a class="level-one goto" href="#contact">Contact</a></li>
                     </ul>
@@ -95,9 +95,14 @@
                     <div class="row-fluid">
                       <div class="span7">
                         <div class="carousel-caption">
-                          <h1>What's your <span>Dream</span>?</h1>
-                          <p class="lead">Vote to have Rah Rah's Tech Truck visit your city. <br>Help kids break out of the hood and achieve their dreams.<br><br><span>SMS your vote to 404-800-7076</span></p>
-                          <a class="btn btn-large btn-success goto" data-toggle="tooltip" title="Vote Now" href="#signmeup">Vote Now</a>
+                          <h1>Vote to have <br><span>Rah Rah's Tech Truck</span><br>Come to Your City</h1>
+                          <p class="lead">Get tools to break out of the hood and achieve your dreams.<br><span class="orange">SMS your vote to 404-800-7076</span></p>
+                         
+                          
+                           <div class="span4 text-center">
+                <a href="#sign-up" class="btn btn-success btn-large btn-block signup">Vote a City Now</a>
+              </div>
+              
                         </div>
                       </div>  
                       <div class="span5 slide-image">  
@@ -112,7 +117,7 @@
                         <div class="carousel-caption">
                           <h1>Gangsta <span>Dreams</span></h1>
                           <p class="lead">What do you want to be?</p>
-                          <a class="btn btn-large btn-success goto" data-toggle="tooltip" title="Dream Big" href="#about">Dream Big</a>
+                          <a class="btn btn-large btn-success goto" data-toggle="tooltip" title="Dream Big" href="#resources">Dream Big</a>
                         </div>   
                       </div>  
                       <div class="span5 slide-image">  
@@ -127,7 +132,7 @@
                         <div class="carousel-caption">
                           <h1> Tell us your <span>Stories</span>.</h1>
                           <p class="lead">Share your stories on instagram or twitter #rahrahsstories</p>
-                          <a class="btn btn-large btn-success goto" data-toggle="tooltip" title="Add Stories to Instagram" href="#portfolio">Browse gallery</a>
+                          <a class="btn btn-large btn-success goto" data-toggle="tooltip" title="Add Stories to Instagram" href="#cities">Browse gallery</a>
                         </div>
                       </div>            
                       <div class="span5 slide-image">  
@@ -145,15 +150,58 @@
       </div><!-- End Header Wrapper -->
       
        <div class="actions-wrapper2">
-        <div class="action-layer" data-stellar-background-ratio="0.3" data-stellar-vertical-offset="100"></div>
+        <div class="" data-stellar-background-ratio="0.3" data-stellar-vertical-offset="100"></div>
         <div class="" data-stellar-background-ratio="1.4" data-stellar-vertical-offset="100"></div> 
         <section id="donate" class="actions container">     
           <!-- Featured Section Calls to Action -->
           
-           <p>Help us break the chain of underachievement.</p> <a class="btn btn-large btn-success goto" data-toggle="tooltip" title="Donate Now" href="#signmeup">Donate Now</a><a class="btn btn-large btn-success goto" data-toggle="tooltip" title="Donate Now" href="#signmeup">Volunteer as a Mentor</a> <a class="btn btn-large btn-success goto" data-toggle="tooltip" title="Donate Now" href="#signmeup">Corporate involvement</a>
+           <h2>Wakaflocka Flame Wants Your help! <a href="">Volunteer as a Mentor</a><a href="">Corporate involvement</a></h2></p> <a class="btn btn-large btn-green goto" data-toggle="tooltip" title="Donate Now" href="#signmeup">Donate Now</a>
           <!-- End Featured Section Calls to Action -->
         </section>
+      </div> 
+      
+      <div class="main-content-wrapper"> 
+        <div class="content-layer" data-stellar-background-ratio="0.3" data-stellar-vertical-offset="100"></div>
+        <section class="main-content container">
+          
+          
+          <!-- Front Page Content -->
+          <div id="about" class="row-fluid content">
+            <div class="span4"><h2>Help kids achieve their <span>dreams</span></h2></div>
+            <div class="span8">
+              <img class="pull-right" src="images/single.png" alt="" />  
+              <p class="lead">Wakaflocka Flame here. Rah Rah’s Tech Truck connects technology and kids (in underprivileged hoods) to help kids achieve their dreams. </p><p class="lead">In honor of my brother, we are visiting cities, bringing technology to kids to help them follow their passions in music, coding, film and more and learn other life skills (like how to setup a bank account or email address) to help break the chain of underachievement. Donate today to help kids achieve their dreams. .</p>
+          
+            </div>
+          </div>  
+          <!-- End Front Page Content -->
+          
+          <!-- Chart -->
+          <div class="row-fluid content chart">
+            <div id="cities" class="span12">
+              <h2>Will your city be next?</h2>  
+              <div class="canvas-wrapper"> 
+                <canvas id="canvas" height="450" width="700"></canvas>
+              </div>
+              <p class="lead text-center"><br/><br/>* Please Note: stats etc.</p>
+            </div>
+          </div>  
+          <!-- Chart -->
+          
+         </section>
+        <div class="polaroid-layer" data-stellar-background-ratio="0.8" data-stellar-vertical-offset="400"></div>  
+        <div class="skyline-layer visible-desktop" data-stellar-background-ratio="0.3" data-stellar-vertical-offset="300"></div>
       </div>
+      
+           <!-- Start Map -->  
+      <div class="map-wrapper">  
+        <section class="map">
+          <div id="map">  
+          </div>
+        </section>  
+      </div>  
+      <!-- End Map -->
+      
       
       
       <div class="actions-wrapper">
@@ -167,9 +215,9 @@
               <article class="action-block">
                 
                 <div class="caption"> 
-                  <h3>Donate</h3>
-                  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                  <p class="clearfix"><a data-toggle="tooltip" title="Click me to see a nifty page slide effect..." class="btn btn-large btn-success pull-right feature-1" href="#feature-1">Read more</a></p>
+                  <h3>Get Involved</h3>
+                  <p>We'd love your help with this. We'd love mentors, or corporate involvement</p>
+                  <p class="clearfix"><a title="Contact Us to Get Involved" class="btn btn-large btn-success level-one goto" href="#contact">Contact Us</a></p>
                 </div>
               </article>
             </div>
@@ -199,51 +247,8 @@
           <!-- End Featured Section Calls to Action -->
         </section>
       </div>
-      
-      
-      
-      <div class="main-content-wrapper"> 
-        <div class="content-layer" data-stellar-background-ratio="0.3" data-stellar-vertical-offset="100"></div>
-        <section class="main-content container">
           
-          
-          <!-- Front Page Content -->
-          <div id="about" class="row-fluid content">
-            <div class="span4"><h2>Help kids achieve their <span>dreams</span></h2></div>
-            <div class="span8">
-              <img class="pull-right" src="images/single.png" alt="" />  
-              <p class="lead">Wakaflocka Flame here. Rah Rah’s Tech Truck connects technology and kids (in underprivileged hoods) to help kids achieve their dreams. </p><p class="lead">In honor of my brother, we are visiting cities, bringing technology to kids to help them follow their passions in music, coding, film and more and learn other life skills (like how to setup a bank account or email address) to help break the chain of underachievement. Donate today to help kids achieve their dreams. .</p>
-          
-            </div>
-          </div>  
-          <!-- End Front Page Content -->
-          
-          <!-- Chart -->
-          <div class="row-fluid content chart">
-            <div class="span12">
-              <h2>Will your city be next?</h2>  
-              <div class="canvas-wrapper"> 
-                <canvas id="canvas" height="450" width="700"></canvas>
-              </div>
-              <p class="lead text-center"><br/><br/>* Please Note: stats etc.</p>
-            </div>
-          </div>  
-          <!-- Chart -->
-          
-        
-           <!-- Start Map -->  
-      <div class="map-wrapper">  
-        <section class="map">
-          <div id="map">  
-          </div>
-        </section>  
-      </div>  
-      <!-- End Map -->
-          
-        </section>
-        <div class="polaroid-layer" data-stellar-background-ratio="0.8" data-stellar-vertical-offset="400"></div>  
-        <div class="skyline-layer visible-desktop" data-stellar-background-ratio="0.3" data-stellar-vertical-offset="300"></div>
-      </div>
+       
       
       <!-- Start Portfolio -->
       <div class="portfolio-wrapper">  
@@ -359,7 +364,7 @@
               <div class="span5 offset2">
                 <section class="footer-column-two">
                   
-                  <h4 class="footer-title">What Other People Are Saying</h4>
+                  <h4 class="footer-title">Waka Flocka Flame Says</h4>
                   <!-- Start Testamonials Carousel -->
                   <section id="testamonials" class="carousel testamonial slide">
                     <!-- Carousel items -->
@@ -367,22 +372,22 @@
                       <article class="active item">
                         <blockquote>
                           <i class="icon-quote-left icon-2x pull-left icon-jazzy"></i>
-                          <p>"Phasellus a metus et urna interdum vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."</p>
-                          <small class="text-right">Jane Apple</small>
+                          <p>"Mainly I want to help break the chain of underachievements."</p>
+                          <small class="text-right">Waka Flocka Flame</small>
                         </blockquote> 
                       </article>
                       <article class="item">
                         <blockquote>
                           <i class="icon-quote-left icon-2x pull-left icon-jazzy"></i>
                           <p>"Vestibulum id ligula porta felis euismod semper. Scelerisque nisl consectetur. Phasellus a metus et urna interdum vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."</p>
-                          <small class="text-right">Jimmy Coconuts</small>
+                          <small class="text-right">Waka Flocka Flame</small>
                         </blockquote> 
                       </article>
                       <article class="item">
                         <blockquote>
                           <i class="icon-quote-left icon-2x pull-left icon-jazzy"></i>
                           <p>"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."</p>
-                          <small class="text-right">I. Amapotato</small>
+                          <small class="text-right">Waka Flocka Flame</small>
                         </blockquote> 
                       </article>
                     </div>
@@ -580,9 +585,12 @@
       <div class="slide-page" id="sign-up">
         <div class="row-fluid">  
           <div class="span6">
-            <h2>There's more to<span> Jazzy</span> than meets the eye</h2>
-            <p class="lead">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-            <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam hicula ut id elit.</p>
+            <h2><span>Vote</span> Your City <span>Now</span></h2>
+            <p class="lead">Login to Twitter or Facebook to vote now. <br>Or you can SMS your vote to 404-800-7076</p>
+             <a href="" class="btn btn-success btn-large btn-block signup">Login to Twitter</a>
+              <a href="" class="btn btn-success btn-large btn-block signup">Login to Facebook</a>
+            <p class="lead"></p>
+            
             <p><a class="btn btn-primary btn-large" href="javascript:$.pageslide.close()">Go Back</a></p>
           </div>  
           <div class="span6">
