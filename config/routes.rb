@@ -7,5 +7,7 @@ OmniauthRails::Application.routes.draw do
 
   resources :services, only: %i(index create destroy)
 
+  post 'sms' => "application@twilio_create"
   root to: "sessions#new"
+
 end

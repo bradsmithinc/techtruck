@@ -7,6 +7,12 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :current_service
 
+  def twilio_create
+    @vote = vote.new(:vote => params['Body'])
+    @vote.save
+    render :text => 'OK'
+  end
+
   protected
   def current_user
     @current_user ||= User.find(session[:user_id]) if session.has_key?(:user_id)
