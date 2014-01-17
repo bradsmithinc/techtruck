@@ -30,13 +30,6 @@ group :production, :test do
   gem 'pg'
 end
 
-group :test do
-  gem 'minitest-rails'
-  gem 'simplecov', require: false
-  gem 'turn'
-  gem 'coveralls', require: false
-end
-
 group :development, :test do
   gem 'sqlite3'
   gem 'fabrication'
