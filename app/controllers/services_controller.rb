@@ -1,7 +1,5 @@
 class ServicesController < ApplicationController
   def index
-    @providers     ||= omniauth_providers
-    @user_services   = current_user.services
   end
 
   def create
