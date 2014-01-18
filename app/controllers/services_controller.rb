@@ -1,5 +1,6 @@
 class ServicesController < ApplicationController
   def index
+   render :layout => false
   end
 
   def create
