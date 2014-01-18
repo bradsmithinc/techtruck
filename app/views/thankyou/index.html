@@ -34,6 +34,16 @@
   <link rel="shortcut icon" href="assets/ico/favicon.png">  
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=431448366986838";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
    <div id="wrapper" data-no-turbolink>
     <div id="scroller">
       
@@ -70,7 +80,11 @@
              
                  <div class="row">
                   <div class="citylist well">
-                    <h1>Thank You For Voting!!!</h1><a class="btn btn-large btn-success citybtn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frahrahstechtruck.com">Share Now</a>
+                    <h1>Thank You For Voting!!!</h1>
+                    
+                    <div class="fb-share-button" data-href="http://rahrahstechtruck.com" data-width="300" data-type="link"></div>
+
+                    <a class="btn btn-large btn-success citybtn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frahrahstechtruck.com">Share Now</a>
                    <p class="cityblurb">Tell all your friends and help get Rah Rah's Tech Truck to your city!</p>
                     
                   </div>
