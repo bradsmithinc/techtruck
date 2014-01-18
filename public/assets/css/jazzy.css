@@ -74,6 +74,26 @@ a:hover, a:focus {
   border-top:8px solid #4d4f1c;
 }
 
+.citylist {
+	width:80%;
+	float: left;
+    margin-left: 30px;
+    min-height: 1px;
+	border-radius:0px;
+	border:8px solid #F7972F;
+	background: url("../img/skyline.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	color:#fff;
+}
+.cityblurb {
+	
+}
+.citybtn {
+	float:right;
+	position:relative;
+}
+.well {
+	
+}
 
 /* Parallax Layers */
 
@@ -364,6 +384,14 @@ img.static {
    font-family: 'OSPDIN', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.brand-fluid2 hr {
+  border-color: #f7972f;
+}
+
+.brand-fluid2 .lead, .brand-fluid2 address {
+  color: #D8651F;
+   font-family: 'OSPDIN', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 /* Action Blocks */
 
 .action-block h3 {
@@ -1236,6 +1264,9 @@ input[type="button"].btn-block {
 
 .lt-ie9 .brand-fluid {
   margin-top: -60px;
+}
+.lt-ie9 .brand-fluid2 {
+  margin-top: 0px;
 }
 
 .lt-ie9 #pricing-table .first.span4 {
