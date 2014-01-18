@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
  
 
   def home
+    @tweets = Twitter.user_timeline("rahrahstruck", :count =>3)
     render 'home', :layout => false
   end
 

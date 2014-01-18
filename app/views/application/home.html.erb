@@ -35,7 +35,7 @@
 </head>
 <body>
   
-  <div id="wrapper">
+  <div id="wrapper" data-no-turbolink>
     <div id="scroller">
       
       <div id="header" class="header-wrapper">
@@ -403,7 +403,15 @@
                   <h4 class="footer-title">Latest Tweets</h4>
                   <!-- To add Twitter feed, please refer to the README.txt -->
                   <!-- <div class="tweet"></div> -->
-                  <div class="tweet"><ul class="tweet_list"><li class="tweet_first tweet_odd"><a class="tweet_avatar" href="#"><img class="img-circle twitter-avatar" src="images/avatar.jpg" alt="" title="" height="25" width="25"></a><span class="tweet_time"><a href="#" title="view tweet on twitter">about 14 days ago</a></span><span class="tweet_join">we said,</span> <span class="tweet_text">I want the <span class="at">@</span><a href="http://twitter.com/mailbox">mailbox</a> Mac app so badly.</span></li><li class="tweet_even"><a class="tweet_avatar" href="#"><img class="img-circle twitter-avatar" src="images/avatar.jpg" alt="" title="" height="25" width="25"></a><span class="tweet_time"><a href="#" title="view tweet on twitter">about 23 days ago</a></span><span class="tweet_join">we replied to</span> <span class="tweet_text"><span class="at">@</span><a href="#">onehundred_be</a> perhaps. Accepting pull requests</span></li><li class="tweet_odd"><a class="tweet_avatar" href="#"><img class="img-circle twitter-avatar" src="images/avatar.jpg" alt="" title="" height="25" width="25"></a><span class="tweet_time"><a href="#" title="view tweet on twitter">about 24 days ago</a></span><span class="tweet_join">we were</span> <span class="tweet_text">serving coffee at <span class="at">@</span><a href="http://twitter.com/heroku">heroku</a> <a href="#" class="tweet_hashtag">#waza</a> was one of my favorite moments – amazing chats with amazing customers</span></li></ul></div>
+                  <div class="tweet">
+                    <ul class="tweet_list">
+                      <% @tweets.each do |tweet| %>
+                        <li class="tweet_first tweet_odd">
+                            <img class="img-circle twitter-avatar" src="images/avatar.jpg" alt="" title="" height="25" width="25">
+                          <span class="tweet_text"><%= tweet['text'] %></span></li>
+                      <% end %>
+                    </ul>
+                  </div>
                 </section>
               </div>
             </div>
@@ -587,8 +595,8 @@
           <div class="span6">
             <h2><span>Vote</span> Your City <span>Now</span></h2>
             <p class="lead">Login to Twitter or Facebook to vote now. <br>Or you can SMS your vote to 404-800-7076</p>
-             <a href="" class="btn btn-success btn-large btn-block signup">Login to Twitter</a>
-              <a href="" class="btn btn-success btn-large btn-block signup">Login to Facebook</a>
+             <a href="/auth/twitter" class="btn btn-success btn-large btn-block">Login to Twitter</a>
+              <a href="/auth/facebook" class="btn btn-success btn-large btn-block">Login to Facebook</a>
             <p class="lead"></p>
             
             <p><a class="btn btn-primary btn-large" href="javascript:$.pageslide.close()">Go Back</a></p>
