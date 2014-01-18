@@ -27,7 +27,7 @@ group :production do
 end
 
 group :production, :test do
-  gem 'pg'
+#  gem 'pg'
 end
 
 group :development, :test do
