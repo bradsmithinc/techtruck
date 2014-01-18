@@ -6,6 +6,8 @@ OmniauthRails::Application.routes.draw do
   match '/auth/failure' => 'services#failure', via: %i(get post)
   match '/logout' => 'sessions#destroy', via: %i(get delete), as: :logout
 
+  get '/thankyou' => 'thankyou#index'
+
   resources :services, only: %i(index create destroy)
 
   post 'sms' => "application#twilio_create"
