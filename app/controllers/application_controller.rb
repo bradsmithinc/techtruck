@@ -9,6 +9,25 @@ class ApplicationController < ActionController::Base
  
 
   def home
+    uri = URI.parse("https://api.instagram.com/v1/tags/rahrahsstories/media/recent?client_id=32c03ead436b463993c4cc1b50fa1197")
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+    request = Net::HTTP::Get.new(uri.request_uri)
+
+    response = http.request(request)
+    hash = JSON.parse(response.body)
+    @image1 = hash['data'][0]['images']['standard_resolution']['url']
+    @image2 = hash['data'][1]['images']['standard_resolution']['url']
+    @image3 = hash['data'][2]['images']['standard_resolution']['url']
+    @image4 = hash['data'][3]['images']['standard_resolution']['url']
+    @image5 = hash['data'][4]['images']['standard_resolution']['url']
+    @image6 = hash['data'][5]['images']['standard_resolution']['url']
+    puts @image1
+    puts "dd"
+    puts @image2
+
     @tweets = Twitter.user_timeline("rahrahstruck", :count =>3)
     render 'home', :layout => false
   end

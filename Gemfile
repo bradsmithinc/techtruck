@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem "twitter-bootstrap-rails"
 gem 'twitter'
 gem 'rails', '4.0.0.beta1'
+gem 'instagram'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.0.beta1'
