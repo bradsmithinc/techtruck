@@ -1,7 +1,7 @@
 class ThankyouController < ApplicationController
   
   def index
-    @votes = Vote.all
+    render :layout => false
   end
 
 end
